@@ -7,3 +7,20 @@ const getComputerChoice = () => {
 };
 
 console.log(getComputerChoice());
+
+const getHumanChoice = () => {
+	const userInput = prompt("Choose rock, paper, or scissors: ").toLowerCase();
+
+	if (
+		userInput == "rock" ||
+		userInput == "paper" ||
+		userInput == "scissors"
+	) {
+		return userInput;
+	} else {
+		console.log("Invalid choice. Try Again!");
+		return getHumanChoice();
+	}
+};
+
+console.log(getHumanChoice());
