@@ -8,18 +8,100 @@
 			name="description"
 			content="A simple rock, paper or scissors game made with JavaScript."
 		/>
+		<link
+			rel="shortcut icon"
+			href="./assets/images/favicon.png"
+			type="image/png"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body>
-		<main>
-			<h1>Rock, Paper or Scissors: The Game</h1>
+		<main class="game">
+			<div class="game__container">
+				<section class="game__results">
+					<h2>Statistics</h2>
+					<div class="game__statistics">
+						<div class="game__stat">
+							<span class="game__stat-label">Plays Won</span>
+							<p class="game__stat-value game__stat-value--won">
+								0
+							</p>
+						</div>
+						<div class="game__stat">
+							<span class="game__stat-label">Lost Plays</span>
+							<p class="game__stat-value game__stat-value--lost">
+								0
+							</p>
+						</div>
+						<div class="game__stat">
+							<span class="game__stat-label">Round</span>
+							<p class="game__stat-value game__stat-value--round">
+								1
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="game__current-play">
+					<div class="game__choice">
+						<div class="game__choice--user">
+							<img
+								src="./assets/images/paper.png"
+								alt="Player's choice"
+								class="game__choice-image"
+							/>
+						</div>
+						<p>VS</p>
+						<div class="game__choice--computer">
+							<img
+								src="./assets/images/scissors.png"
+								alt="Computer's choice"
+								class="game__choice-image"
+							/>
+						</div>
+					</div>
+					<div class="game__current-result">
+						<p class="game__winner">Computer Won</p>
+					</div>
+				</section>
+
+				<section class="game__choices">
+					<button id="rock" class="game__button game__button--rock">
+						<img
+							src="./assets/images/rock.png"
+							alt="Rock"
+							class="game__button-image"
+						/>
+					</button>
+					<button id="paper" class="game__button game__button--paper">
+						<img
+							src="./assets/images/paper.png"
+							alt="Paper"
+							class="game__button-image"
+						/>
+					</button>
+					<button
+						id="scissors"
+						class="game__button game__button--scissors"
+					>
+						<img
+							src="./assets/images/scissors.png"
+							alt="Scissors"
+							class="game__button-image"
+						/>
+					</button>
+				</section>
+			</div>
 		</main>
-		<footer>
-			<p>
+
+		<footer class="footer">
+			<p class="footer__text">
 				Coded by
 				<a
 					href="https://github.com/gvillarroel-dev"
 					target="_blank"
 					rel="noopener noreferrer"
+					class="footer__link"
 					>Villarroel Giuliana</a
 				>
 				| A project from
@@ -27,6 +109,7 @@
 					href="https://www.theodinproject.com"
 					target="_blank"
 					rel="noopener noreferrer"
+					class="footer__link"
 					>The Odin Project</a
 				>
 			</p>
